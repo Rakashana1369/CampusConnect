@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusConnect - Lost and Found</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <header>
+        <h1>CampusConnect</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#report">Report Item</a>
+            <a href="#items">Browse Items</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Home Section -->
+
+        <section id="home" class="hero">
+
+            <h2>Lost Something? Find It Here!</h2>
+
+            <p>
+                A simple platform to connect lost items
+                with their rightful owners.
+            </p>
+
+            <a href="#report" class="hero-button">
+                Report an Item
+            </a>
+
+        </section>
+
+
+        <!-- Report Form Section -->
+
+        <section id="report" class="section">
+
+            <h2>Report an Item</h2>
+
+            <p>Report your lost or found belongings here.</p>
+
+            <form id="itemForm">
+
+                <label for="itemName">Item Name:</label>
+
+                <input
+                    type="text"
+                    id="itemName"
+                    placeholder="Enter item name"
+                    required
+                >
+
+
+                <label for="itemType">Report Type:</label>
+
+                <select id="itemType" required>
+
+                    <option value="">Select type</option>
+                    <option value="Lost">Lost</option>
+                    <option value="Found">Found</option>
+
+                </select>
+
+
+                <label for="category">Category:</label>
+
+                <select id="category" required>
+
+                    <option value="">Select category</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Books">Books</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Others">Others</option>
+
+                </select>
+
+
+                <label for="itemLocation">Location:</label>
+
+                <input
+                    type="text"
+                    id="itemLocation"
+                    placeholder="Where was it lost or found?"
+                    required
+                >
+
+
+                <!-- Photo Upload -->
+
+                <label for="itemImage">Upload Item Photo:</label>
+
+                <input
+                    type="file"
+                    id="itemImage"
+                    accept="image/*"
+                >
+
+
+                <label for="description">Description:</label>
+
+                <textarea
+                    id="description"
+                    placeholder="Describe the item"
+                    rows="4"
+                ></textarea>
+
+
+                <button type="submit">
+                    Submit Report
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Recently Reported Items -->
+
+        <section id="items" class="section">
+
+            <h2>Recently Reported Items</h2>
+
+            <p>Explore the reported items on campus.</p>
+
+
+            <!-- Search and Filter -->
+
+            <div class="search-container">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search items by name..."
+                >
+
+                <select id="filterType">
+
+                    <option value="All">All Items</option>
+                    <option value="Lost">Lost Items</option>
+                    <option value="Found">Found Items</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- No Results Message -->
+
+            <p id="noResults">
+                No matching items found.
+            </p>
+
+
+            <!-- Item Cards -->
+
+            <div id="itemList"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            CampusConnect | Connecting Lost Items
+            with Their Owners
+        </p>
+
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,294 @@
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f6fa;
+    color: #102a43;
+    line-height: 1.6;
+}
+
+
+/* NAVIGATION BAR */
+
+header {
+    background-color: #102a43;
+    color: white;
+    padding: 20px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: #5eead4;
+}
+
+
+/* HOME SECTION */
+
+.hero {
+    background-color: #dff5f1;
+    text-align: center;
+
+    padding: 100px 20px;
+    margin: 40px auto;
+
+    width: 90%;
+    border-radius: 18px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    background-color: #087f73;
+    color: white;
+
+    padding: 14px 35px;
+
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.hero-button:hover {
+    background-color: #065f56;
+}
+
+
+/* COMMON SECTIONS */
+
+.section {
+    background-color: white;
+
+    width: 90%;
+    margin: 40px auto;
+
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section > p {
+    font-size: 18px;
+}
+
+
+/* REPORT FORM */
+
+#itemForm {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    max-width: 600px;
+    margin-top: 25px;
+}
+
+#itemForm label {
+    font-weight: bold;
+    color: #102a43;
+}
+
+#itemForm input,
+#itemForm select,
+#itemForm textarea {
+    width: 100%;
+    padding: 13px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+#itemForm input:focus,
+#itemForm select:focus,
+#itemForm textarea:focus {
+    outline: 2px solid #0d9488;
+    border-color: #0d9488;
+}
+
+#itemForm button {
+    background-color: #087f73;
+    color: white;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#itemForm button:hover {
+    background-color: #065f56;
+}
+
+
+/* SEARCH AND FILTER */
+
+.search-container {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+    max-width: 750px;
+}
+
+.search-container input,
+.search-container select {
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+.search-container input {
+    flex: 1;
+    min-width: 0;
+}
+
+.search-container select {
+    max-width: 180px;
+}
+
+
+/* NO RESULTS */
+
+#noResults {
+    display: none;
+    color: #d9534f;
+    margin: 15px 0;
+}
+
+
+/* ITEM CARDS */
+
+.item-card {
+    background-color: #eaf7f5;
+
+    padding: 20px;
+    margin-top: 18px;
+
+    border-radius: 8px;
+    border-left: 5px solid #087f73;
+}
+
+.item-card h3 {
+    color: #102a43;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.item-card p {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+
+/* ITEM PHOTOS */
+
+.item-photo {
+    width: 200px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+    margin: 12px 0;
+
+    display: block;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #102a43;
+    color: white;
+
+    text-align: center;
+    padding: 20px;
+
+    margin-top: 40px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 25px;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-container select {
+        max-width: none;
+    }
+
+}
